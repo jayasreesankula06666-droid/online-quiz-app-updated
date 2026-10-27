@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Basics Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="logo" aria-hidden="true">Q</div>
+      <div>
+        <p class="eyebrow">STUDENT LEARNING TOOL</p>
+        <h1>Python Basics Quiz</h1>
+      </div>
+    </header>
+
+    <section class="card" id="start-screen">
+      <p class="tag">Test your Python knowledge</p>
+      <h2>Ready to take the quiz?</h2>
+      <p class="muted">Answer 10 multiple-choice questions about Python programming and check your score at the end.</p>
+      <ul class="details">
+        <li><span>📝</span> 10 questions</li>
+        <li><span>⏱️</span> 10-minute time limit</li>
+        <li><span>🎯</span> Instant feedback</li>
+      </ul>
+      <button class="primary" id="start-btn">Start Quiz <span aria-hidden="true">→</span></button>
+    </section>
+
+    <section class="card quiz-card hidden" id="quiz-screen" aria-live="polite">
+      <div class="quiz-top">
+        <span class="question-count" id="question-count">Question 1 of 10</span>
+        <div class="quiz-metrics">
+          <span class="timer-pill" id="timer" aria-live="off">10:00</span>
+          <span class="score-pill" id="live-score">Score: 0</span>
+        </div>
+      </div>
+      <div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div>
+      <h2 id="question-text">Question text</h2>
+      <div class="options" id="options"></div>
+      <p class="feedback" id="feedback" aria-live="polite"></p>
+      <div class="quiz-actions">
+        <button class="secondary" id="next-btn" disabled>Next Question →</button>
+      </div>
+    </section>
+
+    <section class="card result-card hidden" id="result-screen" aria-live="polite">
+      <div class="result-icon" id="result-icon">🏆</div>
+      <p class="tag">Quiz completed</p>
+      <h2 id="result-title">Great effort!</h2>
+      <p class="muted" id="result-message"></p>
+      <p class="time-note hidden" id="time-note">The time limit was reached. Your score includes only answers submitted before time ran out.</p>
+      <div class="result-score"><span id="final-score">0</span><small>/ 10</small></div>
+      <div class="result-track"><div class="result-bar" id="result-bar"></div></div>
+      <p id="percentage-text" class="percentage"></p>
+      <button class="primary" id="restart-btn">Try Again ↻</button>
+    </section>
+    <footer>Made for students · Learn a little every day</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
